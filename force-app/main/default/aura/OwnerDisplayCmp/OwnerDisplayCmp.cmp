@@ -1,0 +1,14 @@
+<aura:component controller="OwnerDisplayController"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+                access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="oUser" type="user" default="{'sobjectType' : 'User'}" />
+  
+    <div style="padding:10px">
+        {!v.oUser.Name}
+           <br/><br/>
+        <img src="{!v.oUser.SmallPhotoUrl}"  alt="{!v.oUser.Name}"/>
+           
+    </div>  
+    
+</aura:component>
